@@ -34,14 +34,16 @@ export default {
   */
   css: [
     '~/assets/style/app.styl',
-    '@/assets/scss/main.scss'
+    '@/assets/scss/main.scss',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+    '@/plugins/fontawesome.js'
   ],
 
   /*

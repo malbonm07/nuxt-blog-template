@@ -11,7 +11,7 @@
               v-bind="{ [`md${card.flex}`]: true }"
               class="pa-3"
             >
-              <v-card elevation="0">
+              <v-card elevation="0" :to="card.link" nuxt>
                 <v-img
                   :src="card.src"
                   height="350px"
@@ -23,7 +23,11 @@
                   >
                     <v-layout fill-height align-center justify-center>
                       <v-flex shrink>
-                        <span class="headline white--text" v-text="card.title"></span>
+                        <p class="display-2 font-weight-light white--text text-capitalize
+                        text-xs-center"
+                        >
+                        {{card.title}}
+                        </p>
                       </v-flex>
                     </v-layout>
                   </v-container>
@@ -32,13 +36,13 @@
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn icon>
-                    <v-icon>favorite</v-icon>
-                  </v-btn>
-                  <v-btn icon>
-                    <v-icon>bookmark</v-icon>
+                    <font-awesome-icon :icon="['fab', 'instagram']" style="font-size: 25px;"/>
                   </v-btn>
                   <v-btn icon>
                     <v-icon>share</v-icon>
+                  </v-btn>
+                  <v-btn small color="#D1B370" dark>
+                    Read More
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -58,9 +62,9 @@
     </v-layout>
   </v-container>
 
-    <v-layout row wrap>
+    <v-layout row wrap style="background: #E1D1A9;">
       <v-flex xs12 md6>
-        <v-card elevation="0" class="pa-2">
+        <v-card elevation="0" class="pa-2" color="transparent">
           <v-card-title primary-title>
             <h3 class="title">SUSCRIBE</h3>
           </v-card-title>
@@ -78,7 +82,7 @@
           </v-text-field>            
           </v-flex>
           <v-flex xs4>
-            <v-btn dark large color="#263238" class="ml-0 marginTop"
+            <v-btn dark large color="#183759" class="ml-0 marginTop"
             >
             SUBSCRIBE
             </v-btn> 
@@ -88,7 +92,7 @@
         </v-card>        
       </v-flex>
       <v-flex xs12 md6>
-        <v-card elevation="0" class="pa-2">
+        <v-card elevation="0" class="pa-2" color="transparent">
           <v-card-title primary-title>
             <h3 class="title">CONTACT</h3>
           </v-card-title>
@@ -148,18 +152,19 @@
     </v-layout>
 
     <v-container grid-list-xs>
+<!-- style="background: #D1B370;" -->
       <v-layout row wrap>
         <v-flex xs12 md4>
-          <h3>ON INSTRAGRAM</h3>
+          <h3 class="mb-2">ON INSTAGRAM</h3>
             <v-layout row wrap>
                 <v-flex
                   v-for="n in 6"
                   :key="n"
                   xs4
                   d-flex
-                  pa-1
+                  pa-2
                 >
-                  <v-card flat tile class="d-flex">
+                  <v-card flat tile class="d-flex" nuxt to="/">
                     <v-img
                       :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
                       :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
@@ -184,13 +189,87 @@
         <v-flex xs12 md4>
           <h3>NEWEST BLOG POSTS</h3>
           <v-layout row wrap>
-            
+            <v-flex xs12>
+              <v-card elevation="0">
+                <v-list>
+                  <v-list-tile avatar>
+                    <v-list-tile-avatar>
+                      <v-img 
+                      src="https://picsum.photos/500/300?image=35"
+                      class="noBorderRadius"
+                      />
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title>Article Title</v-list-tile-title>
+                      <v-list-tile-sub-title>January, 18-2019</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
+            <v-flex xs12>
+              <v-card elevation="0">
+                <v-list>
+                  <v-list-tile avatar>
+                    <v-list-tile-avatar>
+                      <v-img 
+                      src="https://picsum.photos/500/300?image=45"
+                      class="noBorderRadius"
+                      />
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title>Article Title</v-list-tile-title>
+                      <v-list-tile-sub-title>January, 18-2019</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
+            <v-flex xs12>
+              <v-card elevation="0">
+                <v-list>
+                  <v-list-tile avatar>
+                    <v-list-tile-avatar>
+                      <v-img 
+                      src="https://picsum.photos/500/300?image=25"
+                      class="noBorderRadius"
+                      />
+                    </v-list-tile-avatar>
+                    <v-list-tile-content>
+                      <v-list-tile-title>Article Title</v-list-tile-title>
+                      <v-list-tile-sub-title>January, 18-2019</v-list-tile-sub-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
           </v-layout>
         </v-flex>
         <v-flex xs12 md4>
-          
+          <h3 class="mb-2">TAGS</h3>
+          <v-layout row wrap>
+            <v-flex shrink>
+              <v-chip label color="#183759" text-color="white">
+                <v-icon left>label</v-icon>Travel
+              </v-chip>
+            </v-flex>
+            <v-flex shrink>
+              <v-chip label color="#183759" text-color="white">
+                <v-icon left>label</v-icon>Leisure
+              </v-chip>
+            </v-flex>
+            <v-flex shrink>
+              <v-chip label color="#183759" text-color="white">
+                <v-icon left>label</v-icon>Political
+              </v-chip>
+            </v-flex>
+            <v-flex shrink>
+              <v-chip label color="#183759" text-color="white">
+                <v-icon left>label</v-icon>Cooking
+              </v-chip>
+            </v-flex>
+          </v-layout>
         </v-flex>
-
       </v-layout>
     </v-container>
 
@@ -208,18 +287,18 @@ export default {
   },
     data: () => ({
       cards: [
-        { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 },
-        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-        { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
-        { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12 },
-        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-        { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
-        { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
-        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 4 },
-        { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 4 },
-        { title: 'Pre-fab homes', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
-        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 4 },
-        { title: 'Best airlines', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 4 },
+        { title: 'the art of travel', src: 'https://images.pexels.com/photos/772665/pexels-photo-772665.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 12, link: '/' },
+        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6, link: '/' },
+        { title: 'Best vacations', src: 'https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500', flex: 6, link: '/' },
+        { title: 'Favorite sites', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12, link: '/' },
+        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6, link: '/' },
+        { title: 'Best experiences', src: 'https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500', flex: 6, link: '/' },
+        { title: 'Cities', src: 'https://images.pexels.com/photos/2076625/pexels-photo-2076625.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 4, link: '/' },
+        { title: 'Favorite road trips', src: 'https://images.pexels.com/photos/2082103/pexels-photo-2082103.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 4, link: '/' },
+        { title: 'Best vacations', src: 'https://images.pexels.com/photos/2191851/pexels-photo-2191851.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 4, link: '/' },
+        { title: 'Independence', src: 'https://images.pexels.com/photos/2249285/pexels-photo-2249285.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 4, link: '/' },
+        { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 4, link: '/' },
+        { title: 'Best adventures', src: 'https://images.pexels.com/photos/2219433/pexels-photo-2219433.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 4, link: '/' },
       ]
     })
 }
