@@ -287,7 +287,7 @@ export default {
   },
     data: () => ({
       cards: [
-        { title: 'the art of travel', src: 'https://images.pexels.com/photos/772665/pexels-photo-772665.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 12, link: '/' },
+        { title: 'the art of travel', src: 'https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=format%2Ccompress&cs=tinysrgb&h=750&w=1260', flex: 12, link: '/' },
         { title: 'Favorite road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6, link: '/' },
         { title: 'Best vacations', src: 'https://images.pexels.com/photos/2161449/pexels-photo-2161449.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=1&w=500', flex: 6, link: '/' },
         { title: 'Favorite sites', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 12, link: '/' },

@@ -2,7 +2,10 @@ import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
 import pkg from './package'
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
+  router: {
+     base: '/nuxt-blog-template/'
+   },
 
   /*
   ** Headers of the page
