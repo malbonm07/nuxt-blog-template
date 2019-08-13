@@ -5,8 +5,8 @@
 
           <v-layout row wrap>
             <v-flex
-              v-for="card in cards"
-              :key="card.title"
+              v-for="(card,index) in cards"
+              :key="index"
               xs12
               v-bind="{ [`md${card.flex}`]: true }"
               class="pa-3"

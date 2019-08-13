@@ -40,8 +40,8 @@
         <v-toolbar-items class="hidden-sm-and-down">
           <v-btn router to="/" flat>Home</v-btn>
           <v-btn router to="travel" flat>Travel</v-btn>
-          <v-btn router to="leisure" flat>Leisure</v-btn>
-          <v-btn router to="blog" flat>Blog</v-btn>
+          <v-btn flat>Leisure</v-btn>
+          <v-btn flat>Blog</v-btn>
         </v-toolbar-items>
         <v-text-field
             background-color="#E0E0E0"
