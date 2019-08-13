@@ -64,14 +64,14 @@
 
     <v-layout row wrap style="background: #E1D1A9;">
       <v-flex xs12 md6>
-        <v-card elevation="0" class="pa-2" color="transparent">
+        <v-card elevation="0" class="pa-1" color="transparent">
           <v-card-title primary-title>
             <h3 class="title">SUSCRIBE</h3>
           </v-card-title>
           <v-card-text>
             <p class="body-1">Enter your email address to subscribe to this blog and receive notifications of new posts by email.</p>
         <v-layout>
-          <v-flex xs8>
+          <v-flex>
           <v-text-field
             background-color="#E0E0E0"
             flat
@@ -81,8 +81,8 @@
           >
           </v-text-field>            
           </v-flex>
-          <v-flex xs4>
-            <v-btn dark large color="#183759" class="ml-0 marginTop"
+          <v-flex>
+            <v-btn dark color="#183759" class="ml-0 marginTop"
             >
             SUBSCRIBE
             </v-btn> 
@@ -92,7 +92,7 @@
         </v-card>        
       </v-flex>
       <v-flex xs12 md6>
-        <v-card elevation="0" class="pa-2" color="transparent">
+        <v-card elevation="0" class="" color="transparent">
           <v-card-title primary-title>
             <h3 class="title">CONTACT</h3>
           </v-card-title>
@@ -103,11 +103,8 @@
             </v-list-tile-avatar>
 
             <v-list-tile-content>
-              <v-list-tile-title>EMAIL</v-list-tile-title>
+              <v-list-tile-title>THEARTOFTRAVEL@GMAIL.COM</v-list-tile-title>
             </v-list-tile-content>
-            <v-list-tile>
-              <span>THEARTOFTRAVEL@GM...</span>
-            </v-list-tile>
           </v-list-tile>
 
         <v-divider></v-divider>
@@ -120,11 +117,8 @@
             </v-list-tile-avatar>
 
             <v-list-tile-content>
-              <v-list-tile-title>ADDRESS</v-list-tile-title>
+              <span>Nulla St. Mississippi 96522</span>
             </v-list-tile-content>
-            <v-list-tile>
-              <span>1234 WORLD DR. HERE...</span>
-            </v-list-tile>
         </v-list-tile>
 
           <v-divider></v-divider>
@@ -137,11 +131,8 @@
             </v-list-tile-avatar>
 
             <v-list-tile-content>
-              <v-list-tile-title>PHONE</v-list-tile-title>
+              <v-list-tile-title>555-789-1234</v-list-tile-title>
             </v-list-tile-content>
-            <v-list-tile>
-              <span>555-789-1234</span>
-            </v-list-tile>
           </v-list-tile>
 
           <v-divider></v-divider>
